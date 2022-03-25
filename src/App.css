@@ -1,38 +1,162 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+    --dark-gray:hsl(0, 0%, 59%);
+    --very-dark-gray:hsl(0, 0%, 17%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+    overflow-x: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.geo {
+    font-family: 'Rubik', sans-serif;
+    background: url('./images/pattern-bg.png');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    color: #ffff;
+    overflow-x: hidden;
+   padding-bottom: 7%;
+}
+.form-input {
+    margin-top: 1rem;
+    width: 100%;
+    padding-left:60%;
+    height: 3rem;
+}
+.form-input input {
+    height:3rem;
+    width: 38%;
+    border-radius: 10px 0 0 10px;
+    padding-left: 1rem;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    color: var(--very-dark-gray);
+}
+.form-input input:hover {
+    cursor: pointer;
+}
+.form-input input::placeholder {
+    color:var(--dark-gray);   
 }
 
-.App-link {
-  color: #61dafb;
+.form-input button {
+    height:3rem;
+    background:black;
+    width: 4%;
+    border: none;
+    border-radius: 0 10px 10px 0;
+}
+.form-input button:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+.info-data {
+   border-radius: 1rem;
+    margin-top: 2rem;
+    display: flex;
+    background: white;
+    color:var(--very-dark-gray);
+    padding: 1rem;
+    width:77%;
+    padding: 2rem 20px 2rem 3rem;
+    position: absolute;
+    top:120px;
+    z-index: 2;
+}
+.ip {
+    font-size: 20px;
+    font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.loc {
+    margin-left:3rem;
+    border-left: 1px solid var(--dark-gray);
+    height: 4rem;
+    padding-left: 2rem;
+    padding-right: 3rem;
+    font-size: 20px;
+    font-weight:600;
+}
+.region {
+  margin-left: 5px;
+}
+.time {
+    margin-left:2rem;
+    border-left: 1px solid var(--dark-gray);
+    height: 4rem;
+    padding-left: 2rem;
+    padding-right: 3rem;
+    font-size: 20px;
+    font-weight: 600;
+}
+.isp {
+    margin-left:2rem;
+    border-left: 1px solid var(--dark-gray);
+    height: 4rem;
+    padding-left: 2rem;
+    padding-right: 3rem; 
+    font-size: 20px;
+    font-weight: 600;
+}
+.loc p, .time p, .isp p, .ip p{
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: var(--dark-gray);
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+
+@media (max-width:420px) {
+    .geo {
+        padding-bottom: 60%;
+    }
+    .form-input {
+        margin-right: 11rem;
+    }
+    .form-input input {
+        width:75%;
+    }
+    .form-input button {
+        width:10%;
+    }
+    .info-data {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .loc {
+        border-left: none;
+        margin-top: 1rem;
+        width: 100%;
+    }
+    .loc p {
+        text-align: center;
+        margin-right: 3rem;
+    }
+    .ip p, .time p, .isp p {
+        text-align: center;
+    }
+    .p-code {
+       margin-left: 6rem;
+    }
+    .time {
+        border-left: none;
+        margin-top:2rem;
+        margin-right: 1rem;
+    }
+    .isp {
+        border-left: none;
+        margin-top: 1rem;
+        margin-right: 1rem;
+    }
 }
