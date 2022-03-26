@@ -126,6 +126,9 @@ body {
     .form-input input {
         width:75%;
     }
+    .form-input input::placeholder {
+        font-size: 12px;
+    }
     .form-input button {
         width:10%;
     }
